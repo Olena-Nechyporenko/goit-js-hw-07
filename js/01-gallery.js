@@ -30,5 +30,14 @@ src="${evt.target.dataset.source}" width="800" height="600"
 />
 `)
 instance.show()
+
+if(instance.visible) {
+  document.addEventListener("keydown", (evt) => {
+   if(evt.code === "Escape") {
+    instance.close()
+  }
+})
 }
+}
+
 
